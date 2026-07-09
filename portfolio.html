@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio · Loyiso Pitolo | VFX Showreel</title>
+  <meta name="description" content="VFX portfolio of Loyiso Pitolo featuring work on Mad Max, Lost in Space, Maze Runner and more.">
+  <meta name="keywords" content="VFX, Portfolio, Showreel, Compositing, Nuke, Maya, Visual Effects">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= LOADER ================= -->
+  <div id="loader">
+    <div class="loader-content">
+      <h1 class="loader-logo">LOYISO PITOLO</h1>
+      <p class="loader-subtitle">INITIALIZING VFX PIPELINE</p>
+      <div class="loader-progress">
+        <div class="loader-progress-bar" id="loaderBar"></div>
+      </div>
+      <span class="loader-percentage" id="loaderPercent">0%</span>
+    </div>
+  </div>
+
+  <!-- ================= MOUSE GLOW ================= -->
+  <div class="cursor-glow"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo"><span class="highlight">VFX</span>Loyiso</div>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PORTFOLIO PAGE ========== -->
+  
+  <!-- 1. Cinematic Hero -->
+  <section class="portfolio-hero-section">
+    <div class="container">
+      <div class="portfolio-hero">
+        <span class="section-label">FEATURED WORK</span>
+        <h1>
+          Every Frame
+          <span class="gradient-text">Tells A Story</span>
+        </h1>
+        <p>
+          A curated collection of feature films, television series and commercial productions
+          showcasing high-end compositing, digital artistry and visual storytelling.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Premium Showreel -->
+  <section class="showreel-section">
+    <div class="container">
+      <div class="showreel">
+        <video autoplay muted loop playsinline class="showreel-video">
+          <source src="Media/SHOWREEL_FULL_V003-1.mov" type="video/mp4">
+        </video>
+        <div class="showreel-overlay">
+          <h2>2026 VFX SHOWREEL</h2>
+          <p>Feature Films • Television • Commercials</p>
+          <button class="watch-btn" id="watchReelBtn">
+            <i class="fas fa-play"></i>
+            Watch Full Reel
+          </button>
+        </div>
+        <div class="showreel-bars">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO MODAL ===== -->
+<div class="video-modal" id="videoModal">
+  <div class="video-modal-content">
+    <button class="video-modal-close" id="videoModalClose">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="video-wrapper">
+      <video controls autoplay id="reelVideo">
+        <source src="Media/SHOWREEL_FULL_V003-1.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-modal-info">
+      <h3>2026 VFX SHOWREEL</h3>
+      <p>Feature Films · Television · Commercials</p>
+    </div>
+  </div>
+</div>
+
+  <!-- 3. Featured Productions Strip -->
+  <section class="featured-productions">
+    <div class="container">
+      <h2>Featured Productions</h2>
+      <div class="production-strip">
+        <div class="production">MAD MAX</div>
+        <div class="production">LOST IN SPACE</div>
+        <div class="production">BLACK SAILS</div>
+        <div class="production">MAZE RUNNER</div>
+        <div class="production">VAGRANTED QUEEN</div>
+        <div class="production">RAISED BY WOLVES</div>
+        <div class="production">ERASER REBORN</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Portfolio Filters -->
+  <section class="portfolio-filters-section">
+    <div class="container">
+      <div class="portfolio-filters">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="film">Feature Films</button>
+        <button data-filter="tv">Television</button>
+        <button data-filter="commercial">Commercials</button>
+        <button data-filter="breakdown">Breakdowns</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Portfolio Cards -->
+  <section class="portfolio-grid-section">
+    <div class="container">
+      <div class="portfolio-grid" id="portfolioGrid">
+        
+        <!-- Mad Max -->
+        <div class="portfolio-card" data-category="film" >
+          <div class="portfolio-image" style="background-image:url('Media/mad-max-fury-road.jpeg');">
+            
+          </div>
+          <div class="card-overlay">
+            <h3>Mad Max</h3>
+            <p>Senior Composer</p>
+            <div class="software-tags">
+              <span>Nuke</span>
+              <span>Maya</span>
+              <span>Flame</span>
+            </div>
+            <a href="#" class="view-project">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Lost in Space -->
+        <div class="portfolio-card" data-category="tv">
+          <div class="portfolio-image" style="background-image:url('Media/lost-in-space.jpeg');">
+            
+          </div>
+          <div class="card-overlay">
+            <h3>Lost in Space</h3>
+            <p>Lead Composer</p>
+            <div class="software-tags">
+              <span>Nuke</span>
+              <span>After Effects</span>
+            </div>
+            <a href="#" class="view-project">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Black Sails -->
+        <div class="portfolio-card" data-category="tv">
+          <div class="portfolio-image" style="background-image:url('Media/black-sails.jpeg');">
+            
+          </div>
+          <div class="card-overlay">
+            <h3>Black Sails</h3>
+            <p>Senior Composer</p>
+            <div class="software-tags">
+              <span>Nuke</span>
+              <span>Premiere</span>
+            </div>
+            <a href="#" class="view-project">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Maze Runner -->
+        <div class="portfolio-card" data-category="film">
+          <div class="portfolio-image" style="background-image:url('Media/maze-runner-the-death-core.jpeg');">
+            
+          </div>
+          <div class="card-overlay">
+            <h3>Maze Runner</h3>
+            <p>Composer</p>
+            <div class="software-tags">
+              <span>Nuke</span>
+              <span>Maya</span>
+            </div>
+            <a href="#" class="view-project">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Coming 2 America -->
+        <div class="portfolio-card" data-category="film">
+          <div class="portfolio-image" style="background-image:url('Media/vagrant-queen\ .jpeg');">
+            
+          </div>
+          <div class="card-overlay">
+            <h3>Vagrant Queen</h3>
+            <p>Senior Composer</p>
+            <div class="software-tags">
+              <span>Nuke</span>
+              <span>Resolve</span>
+            </div>
+            <a href="#" class="view-project">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Raised by Wolves -->
+        <div class="portfolio-card" data-category="tv">
+          <div class="portfolio-image" style="background-image:url('Media/raised-by-wolves-2.jpeg');">
+            
+          </div>
+          <div class="card-overlay">
+            <h3>Raised by Wolves</h3>
+            <p>Lead Composer</p>
+            <div class="software-tags">
+              <span>Nuke</span>
+              <span>Houdini</span>
+            </div>
+            <a href="#" class="view-project">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Resident Evil -->
+        <div class="portfolio-card" data-category="film">
+          <div class="portfolio-image" style="background-image:url('Media/eraser-reborn.jpeg');">
+            
+          </div>
+          <div class="card-overlay">
+            <h3>Eraser Reborn</h3>
+            <p>Composer</p>
+            <div class="software-tags">
+              <span>Nuke</span>
+              <span>Maya</span>
+              <span>Flame</span>
+            </div>
+            <a href="#" class="view-project">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Commercial Campaign -->
+        <div class="portfolio-card" data-category="commercial">
+          <div class="portfolio-image" style="background-image:url('Media/film.jpg');">
+            
+          </div>
+          <div class="card-overlay">
+            <h3>Commercial Campaign</h3>
+            <p>Senior Composer</p>
+            <div class="software-tags">
+              <span>Nuke</span>
+              <span>After Effects</span>
+            </div>
+            <a href="#" class="view-project">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Project Statistics -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-count="250">
+          <span class="stat-number">0</span>
+          <span class="stat-label">Shots</span>
+        </div>
+        <div class="stat-item" data-count="15">
+          <span class="stat-number">0</span>
+          <span class="stat-label">Productions</span>
+        </div>
+        <div class="stat-item" data-count="10">
+          <span class="stat-number">0</span>
+          <span class="stat-label">Years</span>
+        </div>
+        <div class="stat-item" data-count="100">
+          <span class="stat-number">0</span>
+          <span class="stat-label">% Pass Rate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Pipeline -->
+  <section class="pipeline-section">
+    <div class="container">
+      <h2>VFX Pipeline</h2>
+      <div class="pipeline-steps">
+        <div class="pipeline-step"><i class="fas fa-clipboard-list"></i><span>Pre Production</span></div>
+        <div class="pipeline-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="pipeline-step"><i class="fas fa-camera"></i><span>On Set Supervision</span></div>
+        <div class="pipeline-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="pipeline-step"><i class="fas fa-image"></i><span>Plate Preparation</span></div>
+        <div class="pipeline-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="pipeline-step"><i class="fas fa-crosshairs"></i><span>Tracking</span></div>
+        <div class="pipeline-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="pipeline-step"><i class="fas fa-eraser"></i><span>Cleanup</span></div>
+        <div class="pipeline-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="pipeline-step"><i class="fas fa-cut"></i><span>Rotoscoping</span></div>
+        <div class="pipeline-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="pipeline-step"><i class="fas fa-cubes"></i><span>CG Integration</span></div>
+        <div class="pipeline-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="pipeline-step"><i class="fas fa-lightbulb"></i><span>Lighting</span></div>
+        <div class="pipeline-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="pipeline-step"><i class="fas fa-layer-group"></i><span>Compositing</span></div>
+        <div class="pipeline-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="pipeline-step"><i class="fas fa-palette"></i><span>Colour Matching</span></div>
+        <div class="pipeline-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="pipeline-step"><i class="fas fa-check-circle"></i><span>Final Delivery</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Software Proficiency -->
+  <section class="software-proficiency">
+    <div class="container">
+      <h2>Software Proficiency</h2>
+      <div class="software-grid">
+        <div class="software-card">
+          <div class="software-icon"><i class="fas fa-cube"></i></div>
+          <h3>NUKE</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <div class="rating-label">Expert</div>
+        </div>
+        <div class="software-card">
+          <div class="software-icon"><i class="fas fa-cube"></i></div>
+          <h3>MAYA</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <div class="rating-label">Expert</div>
+        </div>
+        <div class="software-card">
+          <div class="software-icon"><i class="fas fa-video"></i></div>
+          <h3>AFTER EFFECTS</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <div class="rating-label">Advanced</div>
+        </div>
+        <div class="software-card">
+          <div class="software-icon"><i class="fas fa-paint-bucket"></i></div>
+          <h3>DAVINCI RESOLVE</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <div class="rating-label">Advanced</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>What Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"Loyiso's compositing work consistently exceeded expectations."</p>
+          <span class="testimonial-author">VFX Supervisor, ILM</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"Outstanding attention to detail and creative problem solving."</p>
+          <span class="testimonial-author">Film Producer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Awards / Stats Bar -->
+  <section class="awards-section">
+    <div class="container">
+      <div class="awards-grid">
+        <div class="award-item">
+          <span class="award-number">10+</span>
+          <span class="award-label">Years</span>
+        </div>
+        <div class="award-item">
+          <span class="award-number">250+</span>
+          <span class="award-label">Completed Shots</span>
+        </div>
+        <div class="award-item">
+          <span class="award-number">15+</span>
+          <span class="award-label">Major Productions</span>
+        </div>
+        <div class="award-item">
+          <span class="award-number">Worldwide</span>
+          <span class="award-label">Remote Freelancer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Call To Action -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Bring<br>Your Vision<br>To Life?</h2>
+        <p>Let's create cinematic visuals that captivate audiences worldwide.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn primary-btn btn-large">Start Your Project <i class="fas fa-arrow-right"></i></a>
+          <a href="#" class="btn outline-btn btn-large">Watch Full Showreel <i class="fas fa-download"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container footer-content">
+      <h3>Ready to Create Something Extraordinary?</h3>
+      <p>Let's bring your vision to life through cinematic visual effects.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="IMDb"><i class="fas fa-film"></i></a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Loyiso Pitolo · VFX Freelance</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    document.querySelector('.nav-link[href="portfolio.html"]')?.classList.add('active');
+  </script>
+</body>
+</html>

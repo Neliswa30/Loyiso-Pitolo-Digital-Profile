@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery · Loyiso Pitolo | Creative Work</title>
+  <meta name="description" content="Personal creative gallery of Loyiso Pitolo featuring short films, photography, experimental VFX, documentaries and behind-the-scenes content.">
+  <meta name="keywords" content="VFX, Gallery, Photography, Short Films, Experimental, Behind the Scenes, Documentary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= LOADER ================= -->
+  <div id="loader">
+    <div class="loader-content">
+      <h1 class="loader-logo">LOYISO</h1>
+      <p class="loader-subtitle">INITIALIZING CREATIVE GALLERY</p>
+      <div class="loader-progress">
+        <div class="loader-progress-bar" id="loaderBar"></div>
+      </div>
+      <span class="loader-percentage" id="loaderPercent">0%</span>
+    </div>
+  </div>
+
+  <!-- ================= MOUSE GLOW ================= -->
+  <div class="cursor-glow"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo"><span class="highlight">VFX</span>Loyiso</div>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ========== GALLERY PAGE ========== -->
+
+  <!-- Hero -->
+  <section class="gallery-hero reveal">
+    <span class="section-label">CREATIVE GALLERY</span>
+    <h1>
+      <span class="gradient-text">Personal</span> Creative Space
+    </h1>
+    <p>
+      A collection of personal films, experimental VFX, cinematography, photography
+      and behind-the-scenes moments captured outside commercial productions.
+    </p>
+  </section>
+
+  <!-- Filters -->
+  <div class="container">
+    <div class="gallery-filters reveal">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="video">Videos</button>
+      <button data-filter="photography">Photography</button>
+      <button data-filter="documentary">Documentaries</button>
+      <button data-filter="travel">Travel</button>
+      <button data-filter="bts">Behind the Scenes</button>
+      <button data-filter="experimental">Experimental VFX</button>
+      <button data-filter="drone">Drone Footage</button>
+      <button data-filter="timelapse">Timelapses</button>
+    </div>
+  </div>
+
+  <!-- ===== SHORT FILMS ===== -->
+  <div class="container">
+    <h2 class="gallery-section-title reveal"><i class="fas fa-film"></i> Short Films</h2>
+    <div class="gallery-grid reveal" id="galleryGrid">
+       
+      <div class="gallery-item" data-category="video documentary" data-video="Media/example documentary.mov">
+        <div class="item-thumb" style="background: radial-gradient(circle at 30% 40%, #1a0a2a, #0b0c10);">
+          <i class="fas fa-video"></i>
+          <span class="thumb-label">0.24 sec</span>
+        </div>
+        <div class="item-overlay">
+          <h3>John Kani</h3>
+          <p>Documentary</p>
+          <div class="item-tags"><span>Documentary</span><span>2024</span></div>
+          <span class="item-watch-btn">▶ Watch Film</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="video documentary" data-video="Media/STB_GRADE_v001.mov">
+        <div class="item-thumb" style="background: radial-gradient(circle at 50% 30%, #1a2a0a, #0b0c10);">
+          <i class="fas fa-paint-brush"></i>
+          <span class="thumb-label">5 min</span>
+        </div>
+        <div class="item-overlay">
+          <h3>Local Artists</h3>
+          <p>Community Stories</p>
+          <div class="item-tags"><span>Music video</span><span>2024</span></div>
+          <span class="item-watch-btn">▶ Watch Film</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="video travel" data-video="Media/travel-clip-1.mp4">
+        <div class="item-thumb" style="background: radial-gradient(circle at 50% 50%, #2a1a0a, #0b0c10);">
+          <i class="fas fa-plane"></i>
+          <span class="thumb-label">1 min</span>
+        </div>
+        <div class="item-overlay">
+          <h3>Travel Diaries</h3>
+          <p>Travel</p>
+          <div class="item-tags"><span>Travel</span><span>2024</span></div>
+          <span class="item-watch-btn">▶ Watch Film</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PHOTOGRAPHY / VIDEOGRAPHY ===== -->
+  <div class="container">
+    <h2 class="gallery-section-title reveal"><i class="fas fa-camera"></i> Photography / Videography</h2>
+    <div class="gallery-grid masonry reveal" id="photoGrid">
+
+      <div class="gallery-item" data-category="video documentary" data-video="Media/Clip-video-2.mp4">
+        <div class="item-thumb" style="background: radial-gradient(circle at 40% 30%, #2a1a1a, #0b0c10);">
+          <i class="fas fa-user"></i>
+          <span class="thumb-label">Portraits</span>
+        </div>
+        <div class="item-overlay">
+          <h3>Portraits</h3>
+          <p>Videography</p>
+          <div class="item-tags"><span>Portraits Video</span></div>
+          <span class="item-watch-btn">View Clip</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="video" data-video="Media/clip-video-1.mp4">
+        <div class="item-thumb" style="background: radial-gradient(circle at 50% 40%, #0a2a0a, #0b0c10);">
+          <i class="fas fa-layer-group"></i>
+          <span class="thumb-label">Life of the party</span>
+        </div>
+        <div class="item-overlay">
+          <h3>Life of the party</h3>
+          <p>Photography</p>
+          <div class="item-tags"><span>party</span></div>
+          <span class="item-watch-btn">View Clip</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="video" data-video="Media/DWANGU DANCE_GRADE_v001.mov">
+        <div class="item-thumb" style="background: radial-gradient(circle at 30% 50%, #1a1a2a, #0b0c10);">
+          <i class="fas fa-film"></i>
+          <span class="thumb-label">Music Video</span>
+        </div>
+        <div class="item-overlay">
+          <h3>Local Artist</h3>
+          <p>Videography</p>
+          <div class="item-tags"><span>Local Artist</span></div>
+          <span class="item-watch-btn">View Clip</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== HOBBIES ===== -->
+  <div class="container">
+    <h2 class="gallery-section-title reveal"><i class="fas fa-heart"></i> Hobbies & Interests</h2>
+    <div class="hobbies-grid reveal">
+      <div class="hobby-item"><i class="fas fa-camera"></i><span>Photography</span></div>
+      <div class="hobby-item"><i class="fas fa-hiking"></i><span>Hiking</span></div>
+      <div class="hobby-item"><i class="fas fa-plane"></i><span>Travel</span></div>
+      <div class="hobby-item"><i class="fas fa-film"></i><span>Filmmaking</span></div>
+      <div class="hobby-item"><i class="fas fa-gamepad"></i><span>Gaming</span></div>
+      <div class="hobby-item"><i class="fas fa-microchip"></i><span>Technology</span></div>
+    </div>
+  </div>
+
+  <!-- ===== VIDEO PLAYER MODAL ===== -->
+  <div class="video-modal" id="videoPlayerModal">
+    <div class="video-modal-content">
+      <button class="video-modal-close" id="videoPlayerClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="video-wrapper">
+        <video controls id="galleryVideo">
+          <source src="" type="video/mp4" id="galleryVideoSource">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-modal-info">
+        <h3 id="galleryVideoTitle">Video Title</h3>
+        <p id="galleryVideoDesc">Video Description</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container footer-content">
+      <h3>Ready to Create Something Extraordinary?</h3>
+      <p>Let's bring your vision to life through cinematic visual effects.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="IMDb"><i class="fas fa-film"></i></a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Loyiso Pitolo · VFX Freelance</p>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="script.js"></script>
+  <script>
+    // Gallery specific functionality
+    // This runs after script.js loads
+    
+    // Ensure gallery nav is active
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    document.querySelector('.nav-link[href="gallery.html"]')?.classList.add('active');
+
+    // Gallery items are handled by script.js initGalleryItems()
+    // Gallery filters are handled by script.js initGalleryFilters()
+    
+    console.log('🎨 Gallery page loaded successfully');
+    console.log('📹 Videos will play when you click Watch buttons');
+  </script>
+</body>
+</html>

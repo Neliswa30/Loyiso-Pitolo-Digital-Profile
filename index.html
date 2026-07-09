@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loyiso Pitolo | Senior VFX Compositor & Digital Artist</title>
+  <meta name="description" content="Official portfolio of Loyiso Pitolo, Senior VFX Compositor with 10+ years of experience creating cinematic visual effects for film and television.">
+  <meta name="keywords" content="VFX, Compositor, Nuke, Maya, Visual Effects, Film, Television, Freelance, Cape Town">
+  <meta name="author" content="Loyiso Pitolo">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= LOADER ================= -->
+  <div id="loader">
+    <div class="loader-content">
+      <h1 class="loader-logo">LOYISO PITOLO</h1>
+      <p class="loader-subtitle">INITIALIZING VFX PIPELINE</p>
+      <div class="loader-progress">
+        <div class="loader-progress-bar" id="loaderBar"></div>
+      </div>
+      <span class="loader-percentage" id="loaderPercent">0%</span>
+    </div>
+  </div>
+
+  <!-- ================= MOUSE GLOW ================= -->
+  <div class="cursor-glow"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo"><span class="highlight">VFX</span>Loyiso</div>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ========== HOME PAGE WITH VIDEO BACKGROUND ========== -->
+  <section id="home" class="section home-section">
+    <!-- Video Background - 🔥 FIRE & ACTION VFX -->
+    <div class="video-background">
+      <video autoplay muted loop playsinline id="heroVideo">
+        <source src="https://videos.pexels.com/video-files/3129671/3129671-hd_1920_1080_30fps.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    
+    <div class="container home-grid">
+      <div class="home-content">
+        <div class="badge">
+          <i class="fas fa-film"></i>
+          AVAILABLE FOR FREELANCE
+          <span class="badge-dot">•</span>
+          FEATURE FILM
+          <span class="badge-dot">•</span>
+          TELEVISION
+          <span class="badge-dot">•</span>
+          COMMERCIALS
+        </div>
+        <h1>
+          Creating
+          <span class="gradient-text">
+            Cinematic<br>
+            Visual Effects
+          </span>
+          That Tell Stories
+        </h1>
+        <p class="subtitle">
+          Senior Visual Effects Compositor with over a decade of experience bringing impossible worlds to life through seamless compositing, digital artistry, and cinematic storytelling. Trusted on feature films, television productions and commercial projects.
+        </p>
+        <div class="cta-group">
+          <a href="portfolio.html" class="btn primary-btn">
+            View Showreel
+            <i class="fas fa-play"></i>
+          </a>
+          <a href="contact.html" class="btn outline-btn">
+            Hire Me
+          </a>
+        </div>
+        <div class="social-proof">
+          <span>
+            <strong>10+</strong>
+            Years Experience
+          </span>
+          <span>
+            <strong>250+</strong>
+            Shots Delivered
+          </span>
+          <span>
+            <strong>15+</strong>
+            Major Productions
+          </span>
+          <span>
+            <strong>Worldwide</strong>
+            Remote Available
+          </span>
+        </div>
+      </div>
+      <div class="home-visual">
+        <div class="floating-shapes">
+          <div class="shape shape1"></div>
+          <div class="shape shape2"></div>
+          <div class="shape shape3"></div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-panel-header">
+            <i class="fas fa-user-astronaut"></i> Senior Compositor
+          </div>
+          <div class="software-list">
+            <span>Nuke</span>
+            <span>Maya</span>
+            <span>After Effects</span>
+            <span>DaVinci Resolve</span>
+            <span>Premiere Pro</span>
+          </div>
+          <div class="hero-status">
+            <i class="fas fa-circle"></i>
+            Available for Projects
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <span></span>
+      <p>SCROLL</p>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED PRODUCTIONS ========== -->
+  <section class="featured-studios">
+    <div class="container">
+      <h3>Featured Productions</h3>
+      <div class="studio-grid">
+        <div class="studio-item"><span>Mad Max</span><i class="fas fa-skull"></i></div>
+        <div class="studio-item"><span>Lost in Space</span><i class="fas fa-rocket"></i></div>
+        <div class="studio-item"><span>Maze Runner</span><i class="fas fa-maze"></i></div>
+        <div class="studio-item"><span>Black Sails</span><i class="fas fa-ship"></i></div>
+        <div class="studio-item"><span>Coming 2 America</span><i class="fas fa-crown"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES PREVIEW ========== -->
+  <section class="services-preview">
+    <div class="container">
+      <h2>What I Do</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-layer-group"></i>
+          <h3>Compositing</h3>
+          <p>Seamless integration of CG elements with live-action plates</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-mask"></i>
+          <h3>Rotoscoping</h3>
+          <p>Precise matte extraction for complex visual effects shots</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-fire"></i>
+          <h3>FX Integration</h3>
+          <p>Dynamic particle systems, explosions, and environmental effects</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-video"></i>
+          <h3>Color Finishing</h3>
+          <p>Cinematic color grading and final delivery mastering</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container footer-content">
+      <h3>Ready to Create Something Extraordinary?</h3>
+      <p>Let's bring your vision to life through cinematic visual effects.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="IMDb"><i class="fas fa-film"></i></a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Loyiso Pitolo · VFX Freelance</p>
+    </div>
+  </footer>
+
+  <!-- Shared JS -->
+  <script src="script.js"></script>
+  <script>
+    // highlight home
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    document.querySelector('.nav-link[href="index.html"]')?.classList.add('active');
+  </script>
+</body>
+</html>
